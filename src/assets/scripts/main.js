@@ -9,6 +9,7 @@ let perros = document.getElementById("perros");
 let gatos = document.getElementById("gatos");
 
 document.addEventListener("DOMContentLoaded", async() =>{
+    
 perros.addEventListener("click", async () => {
     const response = await GetData(url);
     const perros = await response.filter((fi)=> fi.id <= 4);
@@ -34,3 +35,16 @@ gatos.addEventListener('click', function() {
     gatos.style.opacity = '1'; // Puedes ajustar el valor de opacidad según lo necesites (0.5 = 50% de opacidad)
 });
 })
+
+
+//Ir chat en Chat
+const chats = document.querySelectorAll('.chat');
+
+const redirectToChatPage = () => {
+  // Redireccionar a la página de chat general
+  window.location.href = 'chatInterno.html';
+};
+
+chats.forEach(chat => {
+  chat.addEventListener('click', redirectToChatPage);
+});

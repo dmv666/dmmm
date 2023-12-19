@@ -28,8 +28,12 @@ response.forEach(item => {
     
         template.querySelector('img').setAttribute('src', img)
         const clone = template.cloneNode(true)
-        fragment.appendChild(clone)
-});
+        fragment.appendChild(clone);
+
+         
+    });
+
 container.appendChild(fragment)
+
 
 }
