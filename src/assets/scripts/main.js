@@ -36,15 +36,3 @@ gatos.addEventListener('click', function() {
 });
 })
 
-
-//Ir chat en Chat
-const chats = document.querySelectorAll('.chat');
-
-const redirectToChatPage = () => {
-  // Redireccionar a la página de chat general
-  window.location.href = 'chatInterno.html';
-};
-
-chats.forEach(chat => {
-  chat.addEventListener('click', redirectToChatPage);
-});

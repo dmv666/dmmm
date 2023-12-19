@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 *{
-    background-color: #FEC7D7;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
 }
-
+body{
+    background-color: #FEC7D7 !important;
+}
 
 
 .contenedor{
@@ -106,7 +108,13 @@
 /*Pagina 6*/
 .card{
     margin-left: 100px;
+    background-color: #FEC7D7;
     
+}
+.card-img-top{
+    background-color: #FEC7D7;
+    
+    border: none;
 }
 #containercards{
     display: grid;
@@ -193,7 +201,7 @@
 /*Chat Interno*/
 .header{
     background-color: white;
-    padding: 10px 300px;
+    padding: 20px 300px;
     margin-bottom: 30px;
 }
 .contenido{
@@ -203,13 +211,14 @@
 }
 .header h3 {
     background-color: white;
-    padding: 10px 293.5px;
+    padding: 0 293.5px;
     margin-bottom: -12px;
     text-align: center;
+    margin-top: 30px;
 }
 .header img{
     background-color: white;
-    padding: 10px 400px;
+    padding: 0 400px;
     margin-bottom: -12px;
 }
 .flecha img{
@@ -220,7 +229,7 @@
     background-color: white;
 }
 
-.chat-messages p{
+.chat-messages p, .horaTexto{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,26 +259,85 @@
     padding: 20px ;
 }
 
+.MensajeMio {
+    margin-left: 700px;
+    background-color: white;
+    width: 260px;
+    border-radius: 20px;
+    padding: 20px 5px;
+    font-weight: bold;
+    word-wrap: break-word; 
+}
+.delete-btn{
+    margin-left: 890px;
+    border: none;
+    color: white;
+    background-color: #0E172C;
+    padding: 5px;
+    border-radius: 5px;
+}
+/*Perfil*/
+.encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.texto{
+    text-align: center;
+    margin-top: 20px;
+}
+.texto h5{
+    margin-top: 10px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+.formulario input{
+    width: 300px;
+    height: 40px;
+    border-radius: 3px;
+    padding: 15px 0;
+    font-weight: bold; 
+    
+}
+.formulario label{
+    margin-left: -210px;
+    font-weight: bold;
+}
+#guardar{
+    color: white;
+    background-color: #0E172C;
+    border: none;
+    padding: 15px 120px;
+    border-radius: 40px;
+}
 
   /*Menu*/
 
   .menubtns{
     margin-top: 10%;
-    background-color: white !important;
+    background-color: white ;
     color: white;
     border: none;
     text-align: center;
     padding: 20px 0;
+    
 }
 
 .menubtns img{
-    background-color: white !important;
+    background-color: white ;
     color: white;
     border: none;
+    margin-right: 50px;
 }
   .menubtns2{
     margin-top: 27%;
-    background-color: white !important;
+    background-color: white ;
     color: white;
     border: none;
     text-align: center;
@@ -282,10 +350,11 @@
     background-color: white;
     color: white;
     border: none;
+    margin-right: 50px;
 }
 .menubtns3{
     margin-top: 10%;
-    background-color: white !important;
+    background-color: white ;
     color: white;
     border: none;
     text-align: center;
@@ -293,10 +362,27 @@
 }
 
 .menubtns3 img{
-    background-color: white !important;
+    background-color: white ;
     color: white;
     border: none;
+    margin-right: 50px;
 }
+.menubtns4{
+    margin-top: 10%;
+    background-color: white ;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menubtns4 img{
+    background-color: white ;
+    color: white;
+    border: none;
+    margin-right: 50px;
+}
+
 
 /*Media Queries*/
     @media only screen and (min-width:400px) and (max-width:800px) {
@@ -383,6 +469,9 @@
         }
         .menubtns2{
             margin-top: 96%;
+        }
+        .menubtns4{
+            margin-top: 30%;
         }
 
         
