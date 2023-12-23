@@ -107,19 +107,18 @@ body{
 
 /*Pagina 6*/
 .card{
-    margin-left: 100px;
+    margin-left: 170px;
     background-color: #FEC7D7;
-    
+    cursor: pointer;
 }
 .card-img-top{
     background-color: #FEC7D7;
-    
     border: none;
 }
 #containercards{
     display:flex;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: -100px;
+    grid-template-columns: 1fr 1fr ;
+    
 }
 /*Chat*/
 .tituloP{

@@ -3,6 +3,7 @@ import { GetData } from "../helpers/peticiones.js";
 const template = document.getElementById("template").content;
 const templatepet = document.getElementById("templatepet").content;
 const container = document.getElementById("containercards")
+const todo = document.getElementById("todo")
 
 
 export const viewpets = async (response) => {
@@ -50,9 +51,10 @@ export const viewpets = async (response) => {
     const pet = response?.find((fi) => fi.id === id);
     const { name, img, edad, personalidad, personalidad2, personalidad3, Description, raza, ubicacion } = pet;
 
-    container.innerHTML = "";
+    todo.innerHTML = "";
     let fragment = document.createDocumentFragment();
 
+   
     templatepet.querySelector('img').setAttribute('src', img);
     templatepet.querySelector('h2').textContent = name;
     templatepet.querySelector('h5').textContent = `${raza} ‎ ‎ ‎  ${edad}`;
@@ -62,5 +64,9 @@ export const viewpets = async (response) => {
     const clone = templatepet.cloneNode(true)
     clone.querySelector('.card').classList.add('mx-auto', 'text-center');
     fragment.appendChild(clone);
-    container.appendChild(fragment);
+    todo.appendChild(fragment);
+
+    
+      
 };
+
