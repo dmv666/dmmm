@@ -117,7 +117,7 @@ body{
     border: none;
 }
 #containercards{
-    display: grid;
+    display:flex;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: -100px;
 }
