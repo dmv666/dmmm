@@ -25,5 +25,33 @@ h5{
     transform: translate(300px, -1000px);
 }
 
+
+/*Boton Fvorito*/
+.container-buttons-card button {
+	border: none;
+	background: white;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 0px 0px 15px #00000025;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-size: 18px;
+}
+
+#added-favorite {
+	color: red;
+	display: none;
+}
+
+#favorite-regular.active {
+	background-color: red;
+	display: none;
+}
+
+#added-favorite.active {
+	display: block;
+	color: red;
+}
   
 

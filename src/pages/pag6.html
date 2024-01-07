@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../assets/css/second.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Adopcion</title>
 </head>
 
@@ -31,37 +34,53 @@
             </a>
         </div>
         <div class="main-container d-flex justify-content-center align-items-center">
-        <div class="container row" id="containercards">
-            <template id="template">
-                <div class="col-6">
-                    <div class="card" style="width: 12rem;">
-                        <img src="..." class="card-img-top" alt="...">
+            <div class="container row" id="containercards">
+                <template id="template">
+                    <div class="col-6">
+                        <div class="card" style="width: 12rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                        </div>
                     </div>
-                </div>
-            </template>
+                </template>
 
-            
-            <template id="templatepet">
-                
-                
-                <div class="card" style="width: 22rem;">
-                
-                    <img src="" id="top" class="card-img-top" alt="..."">
-                    <div class="card-body">
-                      <h2 class="card-title"></h2>
-                      <h5></h5>
-                      <h3></h3>
-                      <h6></h6>
-                      <h4></h4>
-                      <p class="card-text"></p>
-                      <a href="chat.html" class="btn btn-primary">Contactar</a>
-                    </div>
-                
+
+                <template id="templatepet">
+
+
+                    <div class="card" style="width: 22rem;">
+
+                        <img src="" id="top" class="card-img-top" alt="..."">
+                    <div class=" card-body">
+                        <h2 class="card-title"></h2>
+                        <h5></h5>
+                        <h3></h3>
+                        <h6></h6>
+                        <h4></h4>
+                        <p class="card-text"></p>
+                        <a href="chat.html" class="btn btn-primary">Contactar</a>
                     </div>
 
-                    <div class="volver">
-                        <a href="./pag6.html"><img src="../img/back.png" alt=""></a>
-                    </div>
+            </div>
+
+            <div class="volver">
+                <a href="./pag6.html"><img src="../img/back.png" alt=""></a>
+            </div>
+
+            <div class="container-buttons-card">
+                <button id="favorite">
+                    <i class="fa-regular fa-heart" id="favorite-regular"></i>
+                    <i class="fa-solid fa-heart" id="added-favorite"></i>
+                </button>
+
+            </div>
+
+
+            <!----Boton Favorito ya que no sabemos porque no nos lee el evento en ningun script asi sea uno nuevo----->
+            <script>
+
+
+
+            </script>
             </template>
         </div>
         </div>
@@ -78,11 +97,7 @@
             <a href="person.html"> <img
                     src="https://res.cloudinary.com/dv5xqlkbn/image/upload/v1702853755/Component_2_gu8fio.png"
                     alt=""></a>
-
         </div>
-
-
-
 
     </section>
 
@@ -97,6 +112,9 @@
         crossorigin="anonymous"></script>
     <script type="module" src="../assets/scripts/main.js"></script>
     <script type="module" src="../assets/scripts/viewpets.js"></script>
+    
 </body>
+
+
 
 </html>
