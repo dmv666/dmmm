@@ -77,53 +77,37 @@ export const viewpets = async (response) => {
     fragment.appendChild(clone);
     todo.appendChild(fragment);
 
+    /*************** */
     const favoriteButton = document.getElementById('favorite');
-const regularHeart = document.getElementById('favorite-regular');
-const addedHeart = document.getElementById('added-favorite');
-
-// Función para alternar las clases 'active' al hacer clic en el botón
-favoriteButton.addEventListener('click', function () {
-    const isFavorite = regularHeart.classList.contains('active');
-
-    // Toggle de clases 'active'
-    regularHeart.classList.toggle('active');
-    addedHeart.classList.toggle('active');
-
-    // Obtener todos los favoritos existentes del localStorage
-    const existingFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-    // Obtener el ID de la mascota que se está marcando o desmarcando como favorita
-    const petId = `${id}`;
-
-    if (isFavorite) {
-        // Si ya estaba marcado como favorito, quitarlo de la lista
-        const indexToRemove = existingFavorites.indexOf(petId);
-        if (indexToRemove !== -1) {
-            existingFavorites.splice(indexToRemove, 1);
+    const regularHeart = document.getElementById('favorite-regular');
+    const addedHeart = document.getElementById('added-favorite');
+    
+    // Función para verificar y establecer el estado inicial desde el localStorage
+    function setInitialState() {
+        const isFavorite = localStorage.getItem('isFavorite');
+    
+        if (isFavorite === 'true') {
+            regularHeart.classList.add('active');
+            addedHeart.classList.add('active');
         }
-    } else {
-        // Si no estaba marcado como favorito, agregarlo a la lista
-        existingFavorites.push(petId);
     }
-
-    // Guardar la lista actualizada de favoritos en el localStorage
-    localStorage.setItem('favorites', JSON.stringify(existingFavorites));
-});
-
-// Al cargar la página, verifica y aplica el estado guardado en el localStorage al botón de favoritos
-document.addEventListener('DOMContentLoaded', function () {
-    const existingFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const petId = 'id_de_tu_mascota'; // Reemplaza 'id_de_tu_mascota' con el ID real
-
-    // Si el ID de la mascota está en la lista de favoritos, marca el botón como favorito
-    if (existingFavorites.includes(petId)) {
-        regularHeart.classList.add('active');
-        addedHeart.classList.add('active');
-    } else {
-        regularHeart.classList.remove('active');
-        addedHeart.classList.remove('active');
+    
+    // Función para alternar el estado del corazón favorito y guardar en localStorage
+    function toggleFavorite() {
+        regularHeart.classList.toggle('active');
+        addedHeart.classList.toggle('active');
+    
+        const isFavorite = regularHeart.classList.contains('active');
+        localStorage.setItem('isFavorite', isFavorite);
     }
-});
+    
+    // Agregar evento 'click' al botón de favorito
+    favoriteButton.addEventListener('click', toggleFavorite);
+    
+    // Establecer el estado inicial al cargar la página
+    setInitialState();
+
 };
+
 
 

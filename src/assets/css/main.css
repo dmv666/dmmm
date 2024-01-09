@@ -423,3 +423,166 @@ body{
     position: relative;
     left: 60px;
 }
+
+/*Favoritos*/
+.tituloFavoritos{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+/*Boton Fvorito*/
+.container-buttons-card button {
+	border: none;
+	background: white;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 0px 0px 15px #00000025;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-size: 18px;
+}
+
+#added-favorite {
+	color: red;
+	display: none;
+}
+
+#favorite-regular.active {
+	background-color: red;
+	display: none;
+}
+
+#added-favorite.active {
+	display: block;
+	color: red;
+}
+
+/*Media Queries*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    /*Pagina 1 y Pagina 2*/
+    .imagenPag1{
+    width: 30px;
+    margin-top: 430px;
+    cursor: pointer;
+}
+    .imagenPag2{
+    width: 130px;
+    margin-top: 390px;
+    cursor: pointer;
+}
+/*Pagina 3 y Pagina 4*/
+
+    .ImagenPerroAcostado, .ImagenMuchacha{
+    width: 327px;
+    height: 327px;
+    margin-top: 160px;
+}
+/*Pagina 6*/
+    .card{
+    margin-left: 70px;
+    background-color: #FEC7D7;
+    cursor: pointer;
+}
+/*Chat*/
+    .chat {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 700px;
+    margin: 40px;
+    border-radius: 20px;
+    position: relative;
+  }
+  /*Chat Interno*/
+    .header h3 {
+    background-color: white;
+    padding: 0 293.5px;
+    margin-bottom: -12px;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 100px;
+}
+    .header img{
+    padding: 0 400px;
+    margin-bottom: -16px;
+    margin-right: 100px;
+}
+    .my-message img{
+    margin-left: 400px;
+}
+    .other-message img{
+    margin-left: 70px;
+}
+    .input{
+    margin-bottom: 15px;
+    background-color: white;
+    width: 500px;
+    height: 40px;
+    padding: 20px ;
+    margin-right: 60px;
+}
+
+    .MensajeMio {
+    margin-left: 400px;
+    background-color: white;
+    width: 260px;
+    border-radius: 20px;
+    padding: 20px 5px;
+    font-weight: bold;
+    word-wrap: break-word; 
+}
+    .delete-btn{
+    margin-left: 580px;
+    border: none;
+    color: white;
+    background-color: #0E172C;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+/*Menu*/
+
+    .menubtns{
+    margin-top: 65%;
+    background-color: white ;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 20px 0; 
+}
+  .menubtns2{
+    margin-top: 96%;
+    background-color: white ;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 20px 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+    .menubtns4{
+    margin-top: 30%;
+    background-color: white ;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 20px 0;
+}
+    .menubtns5{
+    margin-top: 115%;
+    background-color: white ;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 20px 0;
+}
+
+}
