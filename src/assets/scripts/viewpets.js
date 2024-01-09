@@ -18,13 +18,20 @@ export const viewpets = async (response) => {
         const {
             id,
             name,
+            gen,
             img,
+            ed,
             edad,
+            p1,
             personalidad,
+            p2,
             personalidad2,
+            p3,
             personalidad3,
             Description,
+            raz,
             raza,
+            loc,
             ubicacion
         } = item;
 
@@ -49,17 +56,21 @@ export const viewpets = async (response) => {
     const Details = async (id) => {
     const response = await GetData(url);
     const pet = response?.find((fi) => fi.id === id);
-    const { name, img, edad, personalidad, personalidad2, personalidad3, Description, raza, ubicacion } = pet;
+    const { name, gen, img, ed, edad, p1, personalidad, p2, personalidad2, p3, personalidad3, Description, raz, raza, loc, ubicacion } = pet;
 
     todo.innerHTML = "";
     let fragment = document.createDocumentFragment();
 
    
     templatepet.querySelector('img').setAttribute('src', img);
-    templatepet.querySelector('h2').textContent = name;
-    templatepet.querySelector('h5').textContent = `${raza} ‎ ‎ ‎  ${edad}`;
+    templatepet.getElementById("genimg").setAttribute('src', gen)
+    templatepet.querySelector('h2').textContent = `${name}`;
+    templatepet.querySelector('h5').textContent = `‎ ‎ ‎ ‎ ‎ ${raza} ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎   ${edad}`;
     templatepet.querySelector('h6').textContent = ubicacion;
-    templatepet.querySelector('h4').textContent = `Personalidad: ${personalidad}-${personalidad2}-${personalidad3}`;
+    templatepet.getElementById("p1").setAttribute('src', p1)
+    templatepet.getElementById("p2").setAttribute('src', p2)
+    templatepet.getElementById("p3").setAttribute('src', p3)
+    templatepet.querySelector('h4').textContent = ` ${personalidad}-${personalidad2}-${personalidad3}`;
     templatepet.querySelector("p").textContent = `Historia de ${name}: ${Description}`
     const clone = templatepet.cloneNode(true)
     clone.querySelector('.card').classList.add('mx-auto', 'text-center');
