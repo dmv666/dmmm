@@ -22,7 +22,11 @@ h5{
     text-align: left;
 }
 .volver{
-    transform: translate(300px, -1000px);
+    transform: translate(400px, -1100px);
+}
+
+#favorite{
+	transform: translate(1060px,-590px);
 }
 
 
